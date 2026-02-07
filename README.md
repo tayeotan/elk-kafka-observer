@@ -26,11 +26,11 @@ The main objectives are:
 ---
 ## Architecture
 
-* `app.py`:
-* `filebeat.yml`:
-* `logstash.conf`:
-* `docker-compose.yml`:
-* `app.log`:
+* `app.py`: Demo application that generates synthetic log lines (INFO, WARNING, ERROR) and writes them to /logs/app.log inside the container.
+* `filebeat.yml`: Configures Filebeat to tail /logs/app.log, add ECS metadata, and publish events to the Kafka topic app-logs.
+* `logstash.conf`: Input from Kafka (app-logs topic), filter section to parse the log message into fields like level and msg, and output to Elasticsearch indices logs-YYYY.MM.DD
+* `docker-compose.yml`: Orchestrates all services (app, Filebeat, Kafka, Logstash, Elasticsearch, Kibana) on a local Docker network and exposes necessary ports.
+* `app.log`: Example log file showing the raw log lines that the app generates and Filebeat ships (useful for testing and documentation).​
 
 ---
 ## Tools & Services
