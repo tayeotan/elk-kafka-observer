@@ -30,7 +30,7 @@ The main objectives are:
 * `filebeat.yml`:
 * `logstash.conf`:
 * `docker-compose.yml`:
-* 
+* `app.log`:
 
 ---
 ## Tools & Services
