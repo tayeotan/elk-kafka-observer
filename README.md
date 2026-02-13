@@ -59,6 +59,7 @@ The saved search `demo-app-errors` filters on:
 
 ```kql
 level: "ERROR"
+```
 
 ---
 ## Features & Keynotes
@@ -73,7 +74,7 @@ level: "ERROR"
   * Used docker exec and kafka-console-consumer inside the Kafka container to read raw events from the app-logs topic.
   * Observed continuous stream of JSON messages matching the app log patterns and offsets.
 * Elasticsearch indexing
-  * Documents stored in indices like logs-2026.02.06 with correctly parsed fields and timestamps.
+  * Documents stored in indices with correctly parsed fields and timestamps.
 * Kibana analytics
   * Data view logs-* with @timestamp as the time field
   * Saved search demo-app-errors filtering on level: "ERROR"
